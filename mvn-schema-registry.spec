@@ -4,12 +4,13 @@
 #
 Name     : mvn-schema-registry
 Version  : 3.3.1
-Release  : 2
+Release  : 3
 URL      : https://github.com/confluentinc/schema-registry/archive/v3.3.1.tar.gz
 Source0  : https://github.com/confluentinc/schema-registry/archive/v3.3.1.tar.gz
 Source1  : http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.jar
 Source2  : http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.pom
-Source3  : http://packages.confluent.io/maven/io/confluent/rest-utils-parent/3.3.1/rest-utils-parent-3.3.1.pom
+Source3  : http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-parent/3.3.1/kafka-schema-registry-parent-3.3.1.pom
+Source4  : http://packages.confluent.io/maven/io/confluent/rest-utils-parent/3.3.1/rest-utils-parent-3.3.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 CDDL-1.0 CDDL-1.1
@@ -85,8 +86,11 @@ cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/io/confluent/kafka-sche
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-client/3.3.1
 cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-parent/3.3.1
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-parent/3.3.1/kafka-schema-registry-parent-3.3.1.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/io/confluent/rest-utils-parent/3.3.1
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/io/confluent/rest-utils-parent/3.3.1/rest-utils-parent-3.3.1.pom
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/io/confluent/rest-utils-parent/3.3.1/rest-utils-parent-3.3.1.pom
 
 
 %files
@@ -96,6 +100,7 @@ cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/io/confluent/rest-utils
 %defattr(-,root,root,-)
 /usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.jar
 /usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.pom
+/usr/share/java/.m2/repository/io/confluent/kafka-schema-registry-parent/3.3.1/kafka-schema-registry-parent-3.3.1.pom
 /usr/share/java/.m2/repository/io/confluent/rest-utils-parent/3.3.1/rest-utils-parent-3.3.1.pom
 
 %files license
