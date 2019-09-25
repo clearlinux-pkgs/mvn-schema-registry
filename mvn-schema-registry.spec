@@ -4,7 +4,7 @@
 #
 Name     : mvn-schema-registry
 Version  : 3.3.1
-Release  : 4
+Release  : 5
 URL      : https://github.com/confluentinc/schema-registry/archive/v3.3.1.tar.gz
 Source0  : https://github.com/confluentinc/schema-registry/archive/v3.3.1.tar.gz
 Source1  : http://packages.confluent.io/maven/io/confluent/kafka-schema-registry-client/3.3.1/kafka-schema-registry-client-3.3.1.jar
